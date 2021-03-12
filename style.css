@@ -72,14 +72,14 @@ img {
   clear: both;
 }
 
-/* GENERAL */
 * {
   box-sizing: border-box;
   margin: 0%;
   padding: 0%;
 }
 
-/* MEDIA QUERIES */
+
+/* MEDIA QUERIES 420PX*/
 @media screen and (max-width: 420px) {
   body,
   #lezioni,
@@ -123,4 +123,92 @@ img {
     background-color: grey;
   }
 }
-/* / MEDIA QUERIES */
+/* / MEDIA QUERIES 420PX*/
+
+/* MEDIA QUERIES 800PX*/
+@media screen and (min-width: 421px) and (max-width: 800px) {
+  body,
+  #lezioni,
+  #steps,
+  #why {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .row {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding: 4%;
+    font-size: 1.4em;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .row:last-child {
+    margin-bottom: 0%;
+  }
+  h1 {
+    margin-bottom: 15px;
+  }
+  #lezioni,
+  #why {
+    background-image: linear-gradient(
+      45deg, #00A4E7, #00BD51);
+  }
+  #steps .row>.left,
+  #steps .row>.central,
+  #steps .row>.right {
+    margin: 5px;
+    background-color: #428bca;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px black;
+  }
+  #steps .row>.left,
+  #steps .row>.central {
+    width: calc(100% / 2 - 10px);
+    height: 360px;
+  }
+  #steps .row>.right {
+    width: calc(100% - 10px);
+    margin: 5px;
+  }
+  #steps .row>.left:active,
+  #steps .row>.central:active,
+  #steps .row>.right:active {
+    background-color: #77b6ec;
+  }
+  #why .row>.first,
+  #why .row>.second,
+  #why .row>.third {
+    float: left;
+    width: 33%;
+    margin-top: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  #why .row>.first h3,
+  #why .row>.second h3,
+  #why .row>.third h3 {
+    margin-bottom: 20px;
+  }
+  #why .row img {
+    background-color: #007eff00;
+    border-radius: 0;
+  }
+  hr {
+    display: none;
+  }
+    #why .row img  {
+    animation-name: rotation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+}
+/* / MEDIA QUERIES 800PX*/
