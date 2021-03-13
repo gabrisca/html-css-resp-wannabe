@@ -147,6 +147,31 @@ img {
   }
   h1 {
     margin-bottom: 15px;
+    padding: 5px;
+    color: white;
+    background-color: rgb(230, 48, 48);
+    transition: color 5s ease-in;
+    animation-name: change-color;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in;
+  }
+  @keyframes change-color {
+    0% {
+      color: white;
+    }
+    25% {
+      color: rgba(255, 255, 255, 0.726);
+    }
+    50% {
+      color: rgb(60, 68, 68);
+    }
+    75% {
+      color: rgb(22, 29, 28);
+    }
+    100% {
+      color: white
+    }
   }
   #lezioni,
   #why {
